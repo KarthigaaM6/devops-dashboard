@@ -1,0 +1,39 @@
+html, body, #root, #root > [data-reactroot] {
+  height: 100%;
+  margin: 0;
+}
+
+.App {
+  height: 100%;
+  text-align: center;
+  background-image: url('../assets/images/bg.jpg');
+  background-size:  100% 100%;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #222328;
+  /* background-color: #06060E; */
+  padding: 5px 5px;
+}
+
+.header a {
+  float: left;
+  color: #59595A;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header-container hr {
+  margin-top: -1px;
+  border-color: #59595A;
+}
