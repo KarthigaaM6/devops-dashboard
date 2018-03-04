@@ -9,7 +9,7 @@ export default class App extends Component {
     return (
       <div className='App'>
         <Header />
-        <Grid>
+        <Grid className='main_content'>
           <Grid.Row columns={2}>
             <Grid.Column>
               <WidgetCI />

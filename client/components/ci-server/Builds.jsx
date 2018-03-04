@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 import {Line} from 'react-chartjs-2';
 
+const styles = {
+  title: {
+    fontWeight:'bolder',
+    textAlign:'left',
+    marginTop:'0%',
+    textTransform:'uppercase',
+    fontSize:'12px',
+    color: '#59595A'
+  },
+  hr: {
+    borderTop: '1px dotted #59595A'
+  }
+};
+
 export default class Builds extends Component {
   constructor(props) {
     super(props);
@@ -107,10 +121,16 @@ export default class Builds extends Component {
       }
     }
     return (
-        <Line
-          data={data}
-          options={options}
-        />
+      <div>
+        <h5 style={styles.title}>builds per day</h5>
+        <hr style={styles.hr}/>
+        <div>
+          <Line
+            data={data}
+            options={options}
+          />
+        </div>
+      </div>
     );
   }
 }

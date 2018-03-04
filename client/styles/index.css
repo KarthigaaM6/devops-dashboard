@@ -37,3 +37,8 @@ html, body, #root, #root > [data-reactroot] {
   margin-top: -1px;
   border-color: #59595A;
 }
+
+.main_content {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
