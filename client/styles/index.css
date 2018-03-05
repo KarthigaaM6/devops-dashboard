@@ -6,14 +6,15 @@ html, body, #root, #root > [data-reactroot] {
 .App {
   height: 100%;
   text-align: center;
-  background-image: url('../assets/images/bg.jpg');
+  /* background-image: url('../assets/images/bg.jpg'); */
   background-size:  100% 100%;
 }
 
 .header {
   overflow: hidden;
-  background-color: #222328;
-  /* background-color: #06060E; */
+  background-color: #efecec;
+  color: #222328;
+  /* background-color: #222328; */
   padding: 5px 5px;
 }
 

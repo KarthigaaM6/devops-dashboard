@@ -33,7 +33,7 @@ export default class Widget extends Component {
     };
   }
   render() {
-    let { title } = this.props;
+    let { title, commits, pullRequests } = this.props;
     let { show } = this.state;
     return (
       <Grid style={styles.widgetContainer}>
@@ -60,12 +60,12 @@ export default class Widget extends Component {
         </Grid.Row>
         <Grid.Row columns={1} className={show ? '' : 'hidden'}>
           <Grid.Column>
-            <Commits />
+            <Commits datasets={commits}/>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row columns={1} className={show ? '' : 'hidden'}>
           <Grid.Column>
-            <PullRequests />
+            <PullRequests datasets={pullRequests}/>
           </Grid.Column>
         </Grid.Row>
       </Grid>

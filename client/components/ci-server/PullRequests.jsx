@@ -7,7 +7,7 @@ const styles = {
   tableContainer: {
     border:'none',
     backgroundColor:'transparent',
-    color:'white',
+    color:'#59595A',
     textAlign:'center',
     width: '70%',
     margin: 'auto'
@@ -28,30 +28,6 @@ const styles = {
     color: '#59595A',
     marginTop:"-10%"
   }
-};
-
-const data = {
-  labels: DATE.getLastNDates(7),
-  datasets: [
-    {
-      label:'Failed Pull Requests',
-      backgroundColor: 'rgba(189,27,27,0.2)',
-      borderColor: 'rgba(189,27,27,1)',
-      borderWidth: 1,
-      hoverBackgroundColor: 'rgba(189,27,27,0.6)',
-      hoverBorderColor: 'rgba(189,27,27,1)',
-      data: [65, 59, 80, 81, 56, 55, 40]
-    },
-    {
-      label: 'Successful Pull Requests',
-      backgroundColor: 'rgba(42, 173, 20,0.2)',
-      borderColor: 'rgba(110, 255, 86,1)',
-      borderWidth: 1,
-      hoverBackgroundColor: 'rgba(42, 173, 20,0.4)',
-      hoverBorderColor: 'rgba(110, 255, 86,1)',
-      data: [95, 109, 180, 181, 156, 155, 140]
-    }
-  ]
 };
 
 const options = {
@@ -122,6 +98,11 @@ export default class PullRequests extends Component {
 
   render() {
     let { mode } = this.state;
+    let { datasets } = this.props;
+    const data = {
+      labels: DATE.getLastNDates(7),
+      datasets: datasets
+    };
     return (
       <div>
         <div>
