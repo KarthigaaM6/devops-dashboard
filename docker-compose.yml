@@ -2,9 +2,6 @@ version: "3"
 services:
   web:
     image: ramvignesh/devops-dashboard
-      context: ./
-      build:
-      dockerfile: Dockerfile
     network_mode: host
     restart: always
     ports:
