@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {Bar} from 'react-chartjs-2';
-import {Table, Icon} from 'semantic-ui-react';
+import { Bar } from 'react-chartjs-2';
+import { Table, Icon } from 'semantic-ui-react';
+let DATE = require('../../utils/DATE.js');
 
 const styles = {
   tableContainer: {
@@ -25,15 +26,15 @@ const styles = {
   icon: {
     float:"right",
     color: '#59595A',
-    marginTop:"-5%"
+    marginTop:"-10%"
   }
 };
 
 const data = {
-  labels: ['22-Feb','23-Feb', '24-Feb', '25-Feb', '26-Feb', '27-Feb', '28-Feb'],
+  labels: DATE.getLastNDates(7),
   datasets: [
     {
-      label:'Merged pull requests',
+      label:'Merged Pull Requests',
       backgroundColor: 'rgba(52,152,219,0.2)',
       borderColor: 'rgba(52,152,219,1)',
       borderWidth: 1,
@@ -42,7 +43,7 @@ const data = {
       data: [65, 59, 80, 81, 56, 55, 40]
     },
     {
-      label: 'Open pull requests',
+      label: 'Open Pull Requests',
       backgroundColor: 'rgba(241, 196, 15,0.2)',
       borderColor: 'rgba(241, 196, 15,1)',
       borderWidth: 1,
@@ -51,7 +52,7 @@ const data = {
       data: [95, 109, 180, 181, 156, 155, 140]
     },
     {
-      label: 'Declined pull requests',
+      label: 'Declined Pull Requests',
       backgroundColor: 'rgba(189,27,27,0.2)',
       borderColor: 'rgba(189,27,27,1)',
       borderWidth: 1,

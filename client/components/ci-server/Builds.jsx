@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Line} from 'react-chartjs-2';
+let DATE = require('../../utils/DATE.js');
 
 const styles = {
   title: {
@@ -26,10 +27,10 @@ export default class Builds extends Component {
 
   render() {
     const data = {
-      labels: ['22-Feb','23-Feb', '24-Feb', '25-Feb', '26-Feb', '27-Feb', '28-Feb'],
+      labels: DATE.getLastNDates(7),
       datasets: [
         {
-          label: 'Failed builds',
+          label: 'Failed Builds',
           fill: true,
           lineTension: 0.1,
           backgroundColor: 'rgba(80,14,14,0.72)',
@@ -48,7 +49,7 @@ export default class Builds extends Component {
 
         },
         {
-          label: 'Successful builds',
+          label: 'Successful Builds',
           fill: true,
           lineTension: 0.1,
           backgroundColor: 'rgba(42, 173, 20,0.4)',

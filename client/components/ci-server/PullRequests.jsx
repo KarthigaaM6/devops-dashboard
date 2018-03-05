@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {Bar} from 'react-chartjs-2';
-import {Table, Icon} from 'semantic-ui-react';
+import { Bar } from 'react-chartjs-2';
+import { Table, Icon } from 'semantic-ui-react';
+let DATE = require('../../utils/DATE.js');
 
 const styles = {
   tableContainer: {
@@ -25,15 +26,15 @@ const styles = {
   icon: {
     float:"right",
     color: '#59595A',
-    marginTop:"-5%"
+    marginTop:"-10%"
   }
 };
 
 const data = {
-  labels: ['22-Feb','23-Feb', '24-Feb', '25-Feb', '26-Feb', '27-Feb', '28-Feb'],
+  labels: DATE.getLastNDates(7),
   datasets: [
     {
-      label:'Failed pull requests',
+      label:'Failed Pull Requests',
       backgroundColor: 'rgba(189,27,27,0.2)',
       borderColor: 'rgba(189,27,27,1)',
       borderWidth: 1,
@@ -42,7 +43,7 @@ const data = {
       data: [65, 59, 80, 81, 56, 55, 40]
     },
     {
-      label: 'Successful pull requests',
+      label: 'Successful Pull Requests',
       backgroundColor: 'rgba(42, 173, 20,0.2)',
       borderColor: 'rgba(110, 255, 86,1)',
       borderWidth: 1,

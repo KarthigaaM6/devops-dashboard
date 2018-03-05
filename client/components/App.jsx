@@ -10,12 +10,18 @@ export default class App extends Component {
       <div className='App'>
         <Header />
         <Grid className='main_content'>
-          <Grid.Row columns={2}>
+          <Grid.Row columns={4}>
             <Grid.Column>
-              <WidgetCI />
+              <WidgetCI title={'bamboo'}/>
             </Grid.Column>
             <Grid.Column>
-              <WidgetSCM />
+              <WidgetCI title={'jenkins'}/>
+            </Grid.Column>
+            <Grid.Column>
+              <WidgetSCM title={'gitlab'}/>
+            </Grid.Column>
+            <Grid.Column>
+              <WidgetSCM title={'bitbucket'}/>
             </Grid.Column>
           </Grid.Row>
         </Grid>

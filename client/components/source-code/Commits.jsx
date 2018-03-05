@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Line} from 'react-chartjs-2';
+let DATE = require('../../utils/DATE.js');
 
 const styles = {
   title: {
@@ -26,7 +27,7 @@ export default class Commits extends Component {
 
   render() {
     const data = {
-      labels: ['22-Feb','23-Feb', '24-Feb', '25-Feb', '26-Feb', '27-Feb', '28-Feb'],
+      labels: DATE.getLastNDates(7),
       datasets: [
         {
           label: 'Total Commits',
