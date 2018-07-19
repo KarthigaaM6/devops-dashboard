@@ -6,7 +6,7 @@ node {
         
         stage('analyze') {
   
-              sh 'echo "docker.io/ramvignesh/devops-dashboard:latest `pwd`/Dockerfile" > anchore_images'
+              sh 'echo " `pwd`/Dockerfile" > anchore_images'
                 anchore name: 'anchore_images'
             
 }
