@@ -24,11 +24,11 @@
          "spec":{
             "containers":[
                {
-                  "name":"devops-dashboard-eks",
+                  "name":"devops",
                   "image":"191758827001.dkr.ecr.us-west-2.amazonaws.com/devops-dashboard-eks:latest",
                   "ports":[
                      {
-                        "name":"devops-dashboard-eks",
+                        "name":"devops",
                         "containerPort":3000
                      }
                   ]
