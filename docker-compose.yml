@@ -1,7 +1,7 @@
 version: "3"
 services:
   web:
-    image: 191758827001.dkr.ecr.us-west-2.amazonaws.com/devops-dashboard-eks
+    image: ramvignesh/devops-dashboard
     network_mode: host
     restart: always
     ports:
