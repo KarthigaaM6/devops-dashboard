@@ -29,7 +29,7 @@
                   "ports":[
                      {
                         "name":"devops-dashboard-eks",
-                        "containerPort":6379
+                        "containerPort":3000
                      }
                   ]
                }
