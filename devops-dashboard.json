@@ -1,23 +1,23 @@
 {
-   "kind":"ReplicationController",
+   "kind":"devops-dashboard-eks",
    "apiVersion":"v1",
    "metadata":{
-      "name":"devops-dashboard-eks",
+      "name":"devops",
       "labels":{
-         "app":"devops-dashboard-eks",
+         "app":"devops",
          "role":"master"
       }
    },
    "spec":{
       "replicas":1,
       "selector":{
-         "app":"devops-dashboard-eks",
+         "app":"devops",
          "role":"master"
       },
       "template":{
          "metadata":{
             "labels":{
-               "app":"devops-dashboard-eks",
+               "app":"devops",
                "role":"master"
             }
          },
